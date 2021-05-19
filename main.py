@@ -7,6 +7,7 @@ import os
 import requests
 import psycopg2
 import sqlalchemy
+import dotenv
 from sqla_wrapper import SQLAlchemy
 from dotenv import load_dotenv, find_dotenv
 from sqlalchemy import create_engine
