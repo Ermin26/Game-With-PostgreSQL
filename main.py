@@ -28,7 +28,7 @@ load_dotenv(find_dotenv())
 
 app = Flask(__name__)
 app.secret_key = os.getenv('KEY')
-engine = os.getenv('connection')
+engine = create_engine("postgresql://postgres:ermin@localhost:5432/GAME")
 db = scoped_session(sessionmaker(bind=engine))
 db.create_all()
 
