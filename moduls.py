@@ -1,6 +1,7 @@
 import os
 import psycopg2
 from psycopg2 import Error
+import dotenv
 from dotenv import load_dotenv, find_dotenv
 from sqla_wrapper import SQLAlchemy
 from sqlalchemy import Integer, ForeignKey, String, Column
