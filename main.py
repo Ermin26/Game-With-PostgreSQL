@@ -27,8 +27,9 @@ load_dotenv(find_dotenv())
 
 app = Flask(__name__)
 app.secret_key = os.getenv('KEY')
+engine = os.getenv('connection')
+db = scoped_session(sessionmaker(bind=engine))
 db.create_all()
-connect = create_engine(os.getenv('connection'))
 
 
 @app.route("/", methods=["GET"])
