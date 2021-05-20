@@ -10,7 +10,7 @@ from sqlalchemy.orm import relationship
 
 load_dotenv(find_dotenv())
 
-db = SQLAlchemy('postgresql://postgres:ermin@localhost:5432/GAME')
+db = SQLAlchemy('postgresql://postgres:ermin@localhost:51702/GAME')
 
 class User(db.Model):
     __tablename__ = "users"
